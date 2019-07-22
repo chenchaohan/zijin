@@ -2,7 +2,7 @@
   <div class="login">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">米修在线后台管理系统</span>
+        <span class="title">后台管理系统</span>
       </div>
       <el-form
         :model="loginUser"
@@ -18,7 +18,7 @@
           <el-input v-model="loginUser.password" placeholder="请输入密码" type="password"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" @click="submitForm('loginForm')" class="submit_btn">登 录</el-button>
+          <el-button type="primary" @click="submitForm('loginForm')" @keyup.enter.native="myalert" class="submit_btn">登 录</el-button>
         </el-form-item>
         <div class="tiparea">
           <p>
@@ -59,6 +59,9 @@ export default {
     };
   },
   methods: {
+    myalert(){
+      alert("hello superhan")
+    },
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
         if (valid) {
@@ -100,7 +103,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(../assets/bg.jpg) no-repeat center center;
+  background: url('http://b-ssl.duitang.com/uploads/item/201701/16/20170116105642_a3EXe.jpeg') no-repeat center center;
   background-size: 100% 100%;
 }
 .form_container {

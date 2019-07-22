@@ -2,7 +2,7 @@
   <div class="register">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">米修在线后台管理系统</span>
+        <span class="title">台管理系统</span>
       </div>
       <el-form
         :model="registerUser"
@@ -30,7 +30,7 @@
           </el-select>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" class="submit_btn" @click="submitForm('registerForm')">注 册</el-button>
+          <el-button type="primary" class="submit_btn" @keyup.enter="submitForm('registerForm')" @click="submitForm('registerForm')">注 册</el-button>
         </el-form-item>
       </el-form>
     </section>
@@ -116,7 +116,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url(../assets/bg.jpg) no-repeat center center;
+  background: url('http://a.hiphotos.baidu.com/image/pic/item/0b7b02087bf40ad15a962c0b592c11dfa8ecceec.jpg') no-repeat center center;
   background-size: 100% 100%;
 }
 .form_container {
@@ -141,6 +141,7 @@ export default {
   padding: 20px 40px 20px 20px;
   border-radius: 5px;
   box-shadow: 0px 5px 10px #cccc;
+
 }
 
 .submit_btn {
