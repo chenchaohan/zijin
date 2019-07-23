@@ -15,7 +15,7 @@
           <el-input v-model="registerUser.name" placeholder="请输入用户名"></el-input>
         </el-form-item>
         <el-form-item label="邮箱" prop="email">
-          <el-input v-model="registerUser.email" placeholder="请输入邮箱"></el-input>
+          <el-input v-model="registerUser.email" placeholder="请输入邮箱" type="email"></el-input>
         </el-form-item>
         <el-form-item label="密码" prop="password">
           <el-input v-model="registerUser.password" placeholder="请输入密码" type="password"></el-input>
@@ -58,8 +58,8 @@ export default {
       },
       rules: {
         name: [
-          { required: true, message: "用户名不能为空", trigger: "change" },
-          { min: 2, max: 30, message: "长度在 2 到 30 个字符", trigger: "blur" }
+          { required: true, message: "用户名不能为空", trigger: "blur" },
+          { min: 4, max: 30, message: "长度在 4 到 30 个字符", trigger: "blur" }
         ],
         email: [
           {
